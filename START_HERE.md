@@ -23,7 +23,8 @@
 ## Read more only when needed
 
 - [`PROMPT.md`](PROMPT.md) — starter prompt intended for the human user; an agent already following this entrypoint need not reread it.
-- [`docs/REQUIREMENT_CHANGE_CONTROL.md`](docs/REQUIREMENT_CHANGE_CONTROL.md) — during an active task capture only delta in project `pcs/SRS_CHANGES.md`, deriving Task/Feature from native PCS; no SRS section requested from Owner, no SRS sync.\n- [`docs/CONTEXT_ENGINE.md`]
+- [`docs/REQUIREMENT_CHANGE_CONTROL.md`](docs/REQUIREMENT_CHANGE_CONTROL.md) — during an active task capture only delta in project `pcs/SRS_CHANGES.md`, deriving Task/Feature from native PCS; no SRS section requested from Owner, no SRS sync.
+- [`docs/CONTEXT_ENGINE.md`](docs/CONTEXT_ENGINE.md) — on-demand context selection and handoff; optional `tools/pcs-desktop-context.mjs`.
 - [`docs/STATE_OPERATIONS.md`](docs/STATE_OPERATIONS.md) — read when investigating a large 2.1 backlog, diffing snapshots or handling Public/Private data classification.
 - [`distribution/pcs21/README.md`](distribution/pcs21/README.md) — native installation and verification.
 - `distribution/pcs21/GUIDES/`, `REFERENCES/`, `runtime/`, `KIT/` — only when using, debugging or maintaining the installed PCS 2.1 toolkit.
