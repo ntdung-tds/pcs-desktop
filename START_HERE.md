@@ -2,6 +2,10 @@
 
 **Use PCS with an AI coding assistant on your computer.** Start with your project request. This file is the minimal AI entrypoint; do not load all 103 legacy distribution files into chat context.
 
+## Standard resume command
+
+**"Tiếp tục dự án theo PCS, sử dụng trạng thái mới nhất trên GitHub."** is the canonical resume instruction. Use the already identified project workspace and repository, read the active `pcs/current.json` and its Moment (native 2.1), verify GitHub commit if connected, inspect only relevant changes and continue within granted permissions. If the repository is not known or ambiguous, ask for the project link or workspace path. Without GitHub access, report that progress remains local rather than claiming synchronization.
+
 ## Two ways to use Desktop
 
 **A. Prompt-first (no PCS installation):** Ask your coding AI to read this file and work in your existing project workspace using **its available** terminal, file, Git and connector tools. It can plan, edit code, test, document and checkpoint. If it has no access to files, tests or GitHub, it must explain the limitation rather than claim completion. No PCS Python/Node installation is a prerequisite for this mode; your coding application may have its own requirements.

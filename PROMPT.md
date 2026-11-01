@@ -13,3 +13,11 @@ Tôi nghiệm thu tính năng/mốc; bạn tự chủ xử lý việc kỹ thu�
 ```
 
 Bản cài PCS 2.1 chỉ dùng nếu muốn tích hợp quy tắc/skill tự động vào coding agent trên máy; xem [README](README.md).
+
+## Lệnh tiếp tục chuẩn
+
+```text
+Tiếp tục dự án theo PCS, sử dụng trạng thái mới nhất trên GitHub.
+```
+
+Khi đã biết repository hoặc workspace dự án, AI tiếp tục từ `pcs/current.json` và Moment hiện hành, đối chiếu revision và commit nếu có GitHub, chỉ đọc mã và test liên quan, thực hiện công việc rồi checkpoint theo định dạng PCS Desktop hiện có. Không đọc lại toàn bộ hướng dẫn. Nếu chưa rõ dự án, hỏi liên kết repository hoặc workspace; nếu không có quyền GitHub, báo rõ chưa đồng bộ.
