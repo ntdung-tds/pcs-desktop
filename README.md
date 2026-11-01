@@ -9,6 +9,8 @@ Toàn bộ **103 tệp gốc của PCS 2.1.0**, bao gồm installer, mã runtime
 
 Sao chép [PROMPT.md](PROMPT.md) vào coding AI của bạn, hoặc cho AI đọc [START_HERE.md](START_HERE.md). AI dùng workspace, GitHub connector, terminal và công cụ sẵn có. Không bắt buộc cài Python/Node.js chỉ để sử dụng hướng dẫn; khả năng chạy code phụ thuộc ứng dụng AI. Repository dự án có thể **Public hoặc Private do Owner chọn**, nếu chưa có lựa chọn khi cần tạo mới thì AI phải hỏi. Không đưa dữ liệu mật vào repo Public.
 
+**Skill tùy chọn, không phát sinh bộ cài mới:** PCS Desktop 2.1 đã có sẵn một Skill `pcs-continuity` trong gói native. Chỉ hoạt động nếu ứng dụng AI thực sự cài và nhận diện Skill. Cách dùng **Prompt-first** vẫn không cần Skill; không tạo thêm Skill riêng cho SRS, test hoặc checklist và không chỉnh sửa 103 file gốc.
+
 ## Cài một lần (tùy chọn)
 Đọc [hướng dẫn cài PCS 2.1](distribution/pcs21/README.md) và kiểm tra script trước khi chạy. [Sổ tay đầy đủ](distribution/pcs21/PCS_Handbook_v2.1.docx) chỉ cần mở khi tra cứu hoặc gặp trường hợp đặc biệt; **không phải tài liệu bắt buộc nạp vào context mỗi phiên**. Sau khi clone repo, chạy `distribution/pcs21/INSTALL_ONCE.cmd` trên Windows hoặc `distribution/pcs21/INSTALL_ONCE.sh` trên macOS/Linux **sau khi xem và kiểm tra script**, với Node 20+ và Python 3.10+ theo hướng dẫn gốc. Không cần cài lại với mỗi dự án.
 
