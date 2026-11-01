@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0.0",
+  "id": "DEMO-PCS",
+  "name": "PCS starter example — not a real project",
+  "profile": "Standard",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "task_source": "local",
+  "active_task_id": "TASK-001",
+  "permission_policy": {
+    "production": "EXPLICIT_OWNER_APPROVAL",
+    "destructive": "EXPLICIT_OWNER_APPROVAL",
+    "sensitive": "EXPLICIT_OWNER_APPROVAL"
+  },
+  "observed_at": "2026-10-31T00:00:00.000Z"
+}

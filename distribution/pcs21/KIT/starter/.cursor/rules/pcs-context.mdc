@@ -1,0 +1,6 @@
+---
+description: Use PCS continuity and product maps for cross-module changes, long tasks, handoff, project planning and release verification.
+alwaysApply: false
+---
+
+For affected code and business flows, consult `AGENTS.md` plus the relevant sections of `docs/project/PRODUCT_MAP.md` and `docs/project/ARCHITECTURE_MAP.md`. Use `node tools/pcs.mjs resume` to retrieve the checkpoint. Never treat a task-only TECH_DONE result as integrated feature acceptance. For small local fixes, inspect only relevant context.

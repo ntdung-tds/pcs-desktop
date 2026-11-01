@@ -1,0 +1,43 @@
+[
+  {
+    "id": "TASK-001",
+    "title": "Review and approve project scope (demo)",
+    "kind": "document",
+    "owner": "project-lead",
+    "status": "IN_PROGRESS",
+    "updated_at": "2026-10-31T00:00:00.000Z",
+    "feature_ids": [
+      "FEAT-001"
+    ],
+    "qa": {
+      "status": "NA"
+    },
+    "dependencies": [],
+    "acceptance_criteria": [
+      "Sponsor reviews intended scope",
+      "Acceptance documented by authorized owner"
+    ],
+    "evidence": [
+      {
+        "kind": "file",
+        "ref": "docs/project/DEMO_SCOPE.md",
+        "observed_at": "2026-10-31T00:00:00.000Z",
+        "sha256": "1540c1651f6b8696132102a3bcb039764e71d920be6427e481f7afb7e41af176",
+        "verification": {
+          "state": "VERIFIED",
+          "method": "local-hash",
+          "observed_at": "2026-10-31T00:00:00.000Z"
+        }
+      }
+    ],
+    "acceptance": {
+      "decision": "PENDING",
+      "by": null,
+      "at": null
+    },
+    "current_step": "Review with owner (not yet performed)",
+    "last_completed_step": "Demo draft prepared",
+    "next_action": "Identify real sponsor and review project goals without self-approving",
+    "blockers": []
+  }
+]

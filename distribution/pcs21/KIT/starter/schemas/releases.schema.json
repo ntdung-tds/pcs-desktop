@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/pcs-2/schemas/releases.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "status",
+      "environment",
+      "required_flows",
+      "security",
+      "rollback",
+      "approval"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "status": {
+        "enum": [
+          "PLANNED",
+          "STAGED",
+          "APPROVED",
+          "DEPLOYED"
+        ]
+      },
+      "environment": {
+        "type": "string",
+        "minLength": 1
+      },
+      "required_flows": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true
+      },
+      "security": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "enum": [
+              "NOT_RUN",
+              "PASS",
+              "FAIL",
+              "BLOCKED",
+              "NA"
+            ]
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "rollback": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "enum": [
+              "NOT_RUN",
+              "VERIFIED",
+              "BLOCKED"
+            ]
+          },
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "approval": {
+        "type": "object",
+        "required": [
+          "decision"
+        ],
+        "properties": {
+          "decision": {
+            "enum": [
+              "PENDING",
+              "APPROVED",
+              "REJECTED"
+            ]
+          },
+          "by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

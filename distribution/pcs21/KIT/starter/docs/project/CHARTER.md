@@ -1,0 +1,13 @@
+# PROJECT CHARTER — DRAFT
+- **Project ID/name:** `DEMO-PCS` / Thay bằng tên thật.
+- **Sponsor/approver:** UNASSIGNED (chưa được phê duyệt).
+- **Project lead / QA owner:** UNASSIGNED / UNASSIGNED.
+- **Vấn đề và lợi ích:** TBD — mô tả kết quả có thể đo.
+- **Mục tiêu thành công:** TBD — KPI + thời điểm đánh giá.
+- **Phạm vi:** IN: TBD. OUT: TBD.
+- **Sản phẩm bàn giao:** TBD; điều kiện nghiệm thu: TBD.
+- **Mốc và lịch:** TBD; phụ thuộc bên ngoài: TBD.
+- **Ngân sách / capacity:** TBD; không có số liệu = không tự giả định.
+- **Rủi ro/tuân thủ:** xác định classification, privacy, vendor và quy định ngành.
+- **Quyền agent:** chủ động thiết kế, lập trình, kiểm thử, chỉnh sửa trong phạm vi được cấp; không có quyền prod/billing/destructive hoặc truy cập dữ liệu riêng tư mặc định.
+- **Trạng thái:** DRAFT; **ngày/phê duyệt:** PENDING.

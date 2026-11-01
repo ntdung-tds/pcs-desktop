@@ -1,0 +1,14 @@
+[
+  {
+    "id": "FLOW-001",
+    "title": "First user journey (demo only)",
+    "status": "PLANNED",
+    "required_features": [
+      "FEAT-001"
+    ],
+    "e2e": {
+      "status": "NOT_RUN"
+    },
+    "evidence": []
+  }
+]

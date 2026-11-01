@@ -1,0 +1,7 @@
+pcs/.write-lock/
+*.secret
+.env
+.env.*
+!.env.example
+node_modules/
+.DS_Store

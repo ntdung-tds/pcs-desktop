@@ -1,0 +1,13 @@
+# PROJECT PLAN — WORKING
+- **Baseline/version:** 0.1 DRAFT. Source: `pcs/tasks.json` (local mode); bên ngoài nếu đã đổi cấu hình thì phải đối soát.
+- **Workstreams/WBS:** W1 Chuẩn hóa yêu cầu; W2 Thực hiện; W3 QA/Review; W4 Release/Handover (điều chỉnh theo dự án).
+- **Milestone:** M0 Charter accepted; M1 Plan/DoR ready; M2 Deliverables TECH_DONE; M3 Acceptance; M4 Release/Close. **Target dates: TBD**.
+- **Scope/requirements:** xem Charter và task acceptance; chỉ đổi baseline qua Change/approval.
+- **Resource/effort:** owner và capacity TBD; Giới hạn WIP được điều chỉnh theo độ phức tạp và phụ thuộc; không đặt mức cứng nếu chưa có dữ liệu thực tế.
+- **Budget:** TBD; chi phí do người có quyền phê duyệt.
+- **Dependencies:** trong `pcs/tasks.json`; không tạo vòng. External dependencies/blocked cần owner.
+- **QA strategy:** kiểm thử tương ứng deliverable, không giả PASS; ghi trong `templates/QA_PLAN.md` khi có scope.
+- **Risk/changes:** `templates/RISK_REGISTER.md`, `CHANGE_REQUEST.md` hoặc issue tương ứng.
+- **Environment/release:** nếu không có deploy ghi N/A có lý do; production yêu cầu approval riêng.
+- **Communication:** báo cáo theo batch; review milestone/tuần tùy project.
+- **Close/handover:** có checklist, approval và kho lưu trữ hợp lệ.

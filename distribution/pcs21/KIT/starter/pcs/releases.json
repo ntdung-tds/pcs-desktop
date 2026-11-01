@@ -1,0 +1,22 @@
+[
+  {
+    "id": "REL-001",
+    "title": "First release gate (demo only)",
+    "status": "PLANNED",
+    "environment": "staging",
+    "required_flows": [
+      "FLOW-001"
+    ],
+    "security": {
+      "status": "NOT_RUN"
+    },
+    "rollback": {
+      "status": "NOT_RUN"
+    },
+    "approval": {
+      "decision": "PENDING",
+      "by": null,
+      "at": null
+    }
+  }
+]

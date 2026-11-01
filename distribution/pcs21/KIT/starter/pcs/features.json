@@ -1,0 +1,20 @@
+[
+  {
+    "id": "FEAT-001",
+    "title": "First user capability (demo only)",
+    "status": "IN_PROGRESS",
+    "required_tasks": [
+      "TASK-001"
+    ],
+    "consumes": [],
+    "integration": {
+      "status": "NOT_RUN"
+    },
+    "evidence": [],
+    "acceptance": {
+      "decision": "PENDING",
+      "by": null,
+      "at": null
+    }
+  }
+]

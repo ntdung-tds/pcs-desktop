@@ -1,0 +1,11 @@
+# Project Operating Rules — PCS
+- **Source:** `pcs/project.json` selects authoritative task source. Local: `pcs/tasks.json`. External: designated tool; JSON is observation/projection, must reconcile.
+- **Moment:** `pcs/moments/*.json` append-only history. `pcs/current.json` and `CHECKLIST_MOMENT.md` generated. Test/approval/evidence require independent verification.
+- **Roles:** Sponsor/approver owns irreversible and material decisions; project lead owns scope/backlog; agent executes only delegated tasks; QA/security verifies when applicable.
+- **Gates:** initiation → planning → execution → verification → release/use → closure. N/A must give rationale.
+- **Conditions:** READY needs owner, acceptance; BLOCKED needs reason/owner/unblock; TECH_DONE evidence; ACCEPTED approval/evidence/date.
+- **Risk:** classify sensitive operations, backup, rollback, review; escalate blockers rather than bypass.
+- **Cadence:** checkpoint after meaningful progress/change, before handoff, not after every keystroke.
+- **Cross-agent:** separate write scopes/branches; compare revisions; no force overwrite; least-privilege sub-agents.
+- **Reporting:** differentiate *done*, *accepted*, *deployed* and *QA PASS*. Source unknown is UNKNOWN, not PASS.
+- **Final handoff:** owner approval, inventory, documentation, test, recovery and acceptance; no automatic exfiltration of source/data.

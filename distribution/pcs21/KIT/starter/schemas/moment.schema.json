@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/pcs-2/schemas/moment.schema.json",
+  "title": "Snapshot",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "captured_at",
+    "reason",
+    "project_id",
+    "state_sha256",
+    "previous_moment_sha256",
+    "state",
+    "moment_sha256"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "captured_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "previous_moment_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state": {
+      "type": "object",
+      "required": [
+        "project",
+        "tasks",
+        "features",
+        "flows",
+        "releases"
+      ]
+    },
+    "moment_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "additionalProperties": true
+}

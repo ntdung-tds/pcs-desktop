@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/pcs-2/schemas/flows.schema.json",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "id",
+      "title",
+      "status",
+      "required_features",
+      "e2e",
+      "evidence"
+    ],
+    "properties": {
+      "id": {
+        "type": "string",
+        "minLength": 1
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1
+      },
+      "status": {
+        "enum": [
+          "PLANNED",
+          "IN_PROGRESS",
+          "ACCEPTED",
+          "BLOCKED"
+        ]
+      },
+      "required_features": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uniqueItems": true
+      },
+      "e2e": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "enum": [
+              "NOT_RUN",
+              "PASS",
+              "FAIL",
+              "BLOCKED",
+              "NA"
+            ]
+          },
+          "run_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "environment": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "evidence": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "kind",
+            "ref",
+            "observed_at",
+            "verification"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "minLength": 1
+            },
+            "ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "observed_at": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            },
+            "verification": {
+              "type": "object",
+              "required": [
+                "state"
+              ],
+              "properties": {
+                "state": {
+                  "enum": [
+                    "DECLARED",
+                    "VERIFIED",
+                    "STALE"
+                  ]
+                },
+                "method": {
+                  "type": "string"
+                },
+                "observed_at": {
+                  "type": "string",
+                  "format": "date-time",
+                  "pattern": "Z$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/pcs-2/schemas/project.schema.json",
+  "title": "Project",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "profile",
+    "timezone",
+    "task_source",
+    "active_task_id"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile": {
+      "enum": [
+        "Lite",
+        "Standard",
+        "Regulated"
+      ]
+    },
+    "timezone": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_source": {
+      "enum": [
+        "local",
+        "external"
+      ]
+    },
+    "active_task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "permission_policy": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}

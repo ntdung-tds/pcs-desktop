@@ -1,0 +1,2 @@
+case_id,requirement_id,task_id,title,priority,layer,preconditions,test_data,steps,expected,automation,evidence_policy,status
+CASE-001,REQ-001,PRJ-001,Confirm charter approval,P0,Manual,Owner identified,No private data,Review charter and evidence,Approval recorded with owner and time,MANUAL,restricted-if-sensitive,PLANNED

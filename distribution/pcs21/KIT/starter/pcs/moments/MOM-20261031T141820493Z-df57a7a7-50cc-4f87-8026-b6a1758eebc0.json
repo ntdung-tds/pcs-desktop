@@ -1,0 +1,127 @@
+{
+  "schema_version": "2.0.0",
+  "id": "MOM-20261031T141820493Z-df57a7a7-50cc-4f87-8026-b6a1758eebc0",
+  "captured_at": "2026-10-31T14:18:20.493Z",
+  "reason": "starter-baseline",
+  "project_id": "DEMO-PCS",
+  "active_task_id": "TASK-001",
+  "state_sha256": "93958a69c6069f9940d6ec3afe1723cfb3a26dd52df7ef0a3104ce916cb00942",
+  "previous_moment_sha256": null,
+  "state": {
+    "project": {
+      "schema_version": "2.0.0",
+      "id": "DEMO-PCS",
+      "name": "PCS starter example — not a real project",
+      "profile": "Standard",
+      "timezone": "Asia/Ho_Chi_Minh",
+      "task_source": "local",
+      "active_task_id": "TASK-001",
+      "permission_policy": {
+        "production": "EXPLICIT_OWNER_APPROVAL",
+        "destructive": "EXPLICIT_OWNER_APPROVAL",
+        "sensitive": "EXPLICIT_OWNER_APPROVAL"
+      },
+      "observed_at": "2026-10-31T00:00:00.000Z"
+    },
+    "tasks": [
+      {
+        "id": "TASK-001",
+        "title": "Review and approve project scope (demo)",
+        "kind": "document",
+        "owner": "project-lead",
+        "status": "IN_PROGRESS",
+        "updated_at": "2026-10-31T00:00:00.000Z",
+        "feature_ids": [
+          "FEAT-001"
+        ],
+        "qa": {
+          "status": "NA"
+        },
+        "dependencies": [],
+        "acceptance_criteria": [
+          "Sponsor reviews intended scope",
+          "Acceptance documented by authorized owner"
+        ],
+        "evidence": [
+          {
+            "kind": "file",
+            "ref": "docs/project/DEMO_SCOPE.md",
+            "observed_at": "2026-10-31T00:00:00.000Z",
+            "sha256": "1540c1651f6b8696132102a3bcb039764e71d920be6427e481f7afb7e41af176",
+            "verification": {
+              "state": "VERIFIED",
+              "method": "local-hash",
+              "observed_at": "2026-10-31T00:00:00.000Z"
+            }
+          }
+        ],
+        "acceptance": {
+          "decision": "PENDING",
+          "by": null,
+          "at": null
+        },
+        "current_step": "Review with owner (not yet performed)",
+        "last_completed_step": "Demo draft prepared",
+        "next_action": "Identify real sponsor and review project goals without self-approving",
+        "blockers": []
+      }
+    ],
+    "features": [
+      {
+        "id": "FEAT-001",
+        "title": "First user capability (demo only)",
+        "status": "IN_PROGRESS",
+        "required_tasks": [
+          "TASK-001"
+        ],
+        "consumes": [],
+        "integration": {
+          "status": "NOT_RUN"
+        },
+        "evidence": [],
+        "acceptance": {
+          "decision": "PENDING",
+          "by": null,
+          "at": null
+        }
+      }
+    ],
+    "flows": [
+      {
+        "id": "FLOW-001",
+        "title": "First user journey (demo only)",
+        "status": "PLANNED",
+        "required_features": [
+          "FEAT-001"
+        ],
+        "e2e": {
+          "status": "NOT_RUN"
+        },
+        "evidence": []
+      }
+    ],
+    "releases": [
+      {
+        "id": "REL-001",
+        "title": "First release gate (demo only)",
+        "status": "PLANNED",
+        "environment": "staging",
+        "required_flows": [
+          "FLOW-001"
+        ],
+        "security": {
+          "status": "NOT_RUN"
+        },
+        "rollback": {
+          "status": "NOT_RUN"
+        },
+        "approval": {
+          "decision": "PENDING",
+          "by": null,
+          "at": null
+        }
+      }
+    ]
+  },
+  "moment_sha256": "52b20c185fa8440bd04f1adeecf3de41a8a6b1e62b2c5a844c965eb92b7f3168"
+}

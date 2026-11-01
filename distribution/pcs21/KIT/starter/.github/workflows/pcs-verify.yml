@@ -1,0 +1,18 @@
+name: PCS local integrity and policy
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/pcs.mjs verify
+      - run: node --test tools/pcs.test.mjs
+# CI only audits local records; external API/CI/deployment/approval require separate trusted integrations.
+# Before production use, pin third-party actions to vetted full commit SHAs per security policy.
