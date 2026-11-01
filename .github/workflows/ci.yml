@@ -21,3 +21,5 @@ jobs:
       - name: Regression test PCS 2.1 original runtime
         working-directory: distribution/pcs21
         run: node --test runtime/tools/pcs21.test.mjs
+      - name: Test optional Desktop read-only state inspection
+        run: node --test tests/*.test.mjs

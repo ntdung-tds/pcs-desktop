@@ -19,6 +19,7 @@
 ## Read more only when needed
 
 - [`PROMPT.md`](PROMPT.md) — starter prompt intended for the human user; an agent already following this entrypoint need not reread it.
+- [`docs/STATE_OPERATIONS.md`](docs/STATE_OPERATIONS.md) — read when investigating a large 2.1 backlog, diffing snapshots or handling Public/Private data classification.
 - [`distribution/pcs21/README.md`](distribution/pcs21/README.md) — native installation and verification.
 - `distribution/pcs21/GUIDES/`, `REFERENCES/`, `runtime/`, `KIT/` — only when using, debugging or maintaining the installed PCS 2.1 toolkit.
 - Tests, manifests and the handbook — only when validating the corresponding implementation or resolving an issue.
