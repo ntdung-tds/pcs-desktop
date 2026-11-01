@@ -15,13 +15,15 @@ export async function contextDesktop(root,{taskId,limit=6}={}){
   const task=id?tasks.find(t=>t.id===id):null;
   if(id&&!task)throw Error('TASK_NOT_FOUND');
   const flags=FLAGS.filter(k=>task?.[k]===true);
-  const risk=task?.risk??'UNCLASSIFIED';
-  const elevated=!!task&&(!['LOW','NORMAL'].includes(String(risk).toUpperCase())||flags.length>0);
-  return {schema:'pcs.desktop.context.v1',project:project.id,
+  const rawRisk=String(task?.risk??'UNKNOWN').toUpperCase();
+  const risk=['LOW','NORMAL','HIGH','CRITICAL'].includes(rawRisk)?rawRisk:'UNKNOWN';
+  const deps=(task?.dependencies??[]).map(x=>typeof x==='string'&&/^[A-Za-z][A-Za-z0-9._-]{0,79}$/.test(x)?x:'REDACTED');
+  const elevated=!!task&&(!['LOW','NORMAL'].includes(risk)||flags.length>0);
+  return {schema:'pcs.desktop.context.v1',project:typeof project.id==='string'&&/^[A-Za-z][A-Za-z0-9._-]{0,79}$/.test(project.id)?project.id:'REDACTED',
     current_pointer_present:!!current.id,active_task:project.active_task_id,
-    task:task?{id:task.id,status:task.status,risk:String(risk).toUpperCase(),
-      dependencies:(task.dependencies??[]).slice(0,20),
-      dependencies_remaining:Math.max(0,(task.dependencies??[]).length-20),
+    task:task?{id:task.id,status:['PLANNED','IN_PROGRESS','BLOCKED','TECH_DONE','INTEGRATION_PENDING','ACCEPTED','CANCELLED'].includes(task.status)?task.status:'UNKNOWN',risk,
+      dependencies:deps.slice(0,20),
+      dependencies_remaining:Math.max(0,deps.length-20),
       sensitive_flags:flags,owner_review_required:elevated}:null,
     backlog:{total:overview.total,open:overview.open,shown:overview.shown,remaining:overview.remaining},
     handoff_contract:{task_id:task?.id??null,scope:'READ_PROJECT_SOURCE',
