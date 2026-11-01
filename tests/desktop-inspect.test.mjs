@@ -26,7 +26,7 @@ test('Desktop inspect bounded and safe from free-text expansion',async()=>{
 test('Desktop diff lists changed keys without exposing descriptions',async()=>{
  const a=await fixture(),b=await fixture();
  try{
- const list=Array.from({length:150},(_,i)=>({id:'T'+(i+1),status:i===0?'BLOCKED':'PLANNED',title:'private data '+i}));
+ const list=Array.from({length:150},(_,i)=>({id:'T'+(i+1),status:i===0?'BLOCKED':'PLANNED',title:'Sensitive title '+i}));
  await b.write('tasks',list);
  const d=await diffDesktop(a.dir,b.dir);
  assert.equal(d.groups.tasks.total,1);
