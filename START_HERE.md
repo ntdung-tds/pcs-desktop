@@ -23,7 +23,7 @@
 ## Read more only when needed
 
 - [`PROMPT.md`](PROMPT.md) — starter prompt intended for the human user; an agent already following this entrypoint need not reread it.
-- [`docs/REQUIREMENT_CHANGE_CONTROL.md`](docs/REQUIREMENT_CHANGE_CONTROL.md) — track deviations from SRS/outline, all CR decisions and the final approved version; optional read-only `tools/pcs-change-control.mjs`.
+- [`docs/REQUIREMENT_CHANGE_CONTROL.md`](docs/REQUIREMENT_CHANGE_CONTROL.md) — preserve every SRS/outline change and the last approved effective wording; **do not synchronize the source SRS** unless the project is finished and Owner separately requests it. Optional read-only `tools/pcs-change-control.mjs`.
 - [`docs/CONTEXT_ENGINE.md`](docs/CONTEXT_ENGINE.md) — on-demand context selection and handoff; optional `tools/pcs-desktop-context.mjs`.
 - [`docs/STATE_OPERATIONS.md`](docs/STATE_OPERATIONS.md) — read when investigating a large 2.1 backlog, diffing snapshots or handling Public/Private data classification.
 - [`distribution/pcs21/README.md`](distribution/pcs21/README.md) — native installation and verification.
