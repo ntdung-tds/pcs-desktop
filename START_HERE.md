@@ -10,7 +10,7 @@
 
 ## Agent checklist
 
-1. Identify the user's project and actual workspace/tools. Read the user's requirements, project instructions and current project state. For an existing PCS 2.1 workspace, prefer `pcs/current.json` and its current Moment, and use the existing project `AGENTS.md` / `node tools/pcs.mjs resume` only when the toolkit is installed and applicable.
+1. Identify the user's project and actual workspace/tools. Read the user's requirements, project instructions and current project state. For an existing PCS 2.1 workspace, prefer `pcs/current.json` and its current Moment, use the optional bounded context selector when available, and use the existing project `AGENTS.md` / `node tools/pcs.mjs resume` only when the toolkit is installed and applicable.
 2. Inspect only relevant project files, architecture, dependencies, interfaces and tests. Never bulk-load the PCS distribution, handbook, archives, starter templates or unrelated code to the conversation.
 3. Break work into meaningful deliverables; implement and verify using the coding tools actually available. State unrun tests clearly. The Owner reviews product outcomes; routine technical decisions are the agent's responsibility within granted permissions.
 4. When GitHub is connected, use the **user-selected** repository, which can be **Public or Private**. If a new repository must be created and visibility is unspecified, ask the user to choose. Do not publish credentials, restricted data or private internal sources to Public, and check permissions before writes.
@@ -19,6 +19,7 @@
 ## Read more only when needed
 
 - [`PROMPT.md`](PROMPT.md) — starter prompt intended for the human user; an agent already following this entrypoint need not reread it.
+- [`docs/CONTEXT_ENGINE.md`](docs/CONTEXT_ENGINE.md) — on-demand context selection and handoff; optional `tools/pcs-desktop-context.mjs`.
 - [`docs/STATE_OPERATIONS.md`](docs/STATE_OPERATIONS.md) — read when investigating a large 2.1 backlog, diffing snapshots or handling Public/Private data classification.
 - [`distribution/pcs21/README.md`](distribution/pcs21/README.md) — native installation and verification.
 - `distribution/pcs21/GUIDES/`, `REFERENCES/`, `runtime/`, `KIT/` — only when using, debugging or maintaining the installed PCS 2.1 toolkit.
