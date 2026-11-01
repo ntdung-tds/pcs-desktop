@@ -22,3 +22,18 @@ test('bounded metadata packet does not expose task titles',async()=>{
   await assert.rejects(()=>contextDesktop(root,{taskId:'BAD'}),/TASK_NOT_FOUND/);
  }finally{await rm(root,{recursive:true,force:true});}
 });
+
+test('untrusted Desktop metadata is not echoed',async()=>{
+ const root=await mkdtemp(join(tmpdir(),'pcs-d-'));
+ try{
+  await mkdir(join(root,'pcs'));
+  const put=async(n,obj)=>writeFile(join(root,'pcs',n+'.json'),JSON.stringify(obj));
+  await put('project',{id:'P1',active_task_id:'T1'});await put('current',{id:'MOM-1'});
+  await put('tasks',[{id:'T1',status:'PLANNED',risk:'Sensitive risk detail',dependencies:['Secret dependency text']}]);
+  for(const g of ['features','flows','releases'])await put(g,[]);
+  const p=await contextDesktop(root);
+  assert.equal(p.task.risk,'UNKNOWN');assert.equal(p.task.owner_review_required,true);
+  assert.deepEqual(p.task.dependencies,['REDACTED']);
+  assert.ok(!JSON.stringify(p).includes('Sensitive risk detail'));
+ }finally{await rm(root,{recursive:true,force:true});}
+});
