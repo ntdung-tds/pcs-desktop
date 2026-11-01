@@ -12,6 +12,10 @@
 
 **B. Native integration (optional one-time setup):** If you want automatic agent rules, PCS project bootstrap/resume and the full PCS 2.1 starter tools, install the verified distribution from [`distribution/pcs21/`](distribution/pcs21/) following its README. This optional mode **does** require the environment/dependencies described there. Installation is not a prerequisite for Mode A.
 
+## Optional Skill — no extra installation for prompt-first
+
+Native PCS 2.1 already bundles **one** `pcs-continuity` Skill in `distribution/pcs21/KIT/starter/.agents/skills/pcs-continuity/SKILL.md`. It is available only when the host/installer actually installs or discovers it. Prompt-first mode works **without any Skill**; do not create a duplicate Skill for SRS or checklists. Use `docs/REQUIREMENT_CHANGE_CONTROL.md` only when a requirement changes; keep the original SRS untouched.
+
 ## Agent checklist
 
 1. Identify the user's project and actual workspace/tools. Read the user's requirements, project instructions and current project state. For an existing PCS 2.1 workspace, prefer `pcs/current.json` and its current Moment, use the optional bounded context selector when available, and use the existing project `AGENTS.md` / `node tools/pcs.mjs resume` only when the toolkit is installed and applicable.
