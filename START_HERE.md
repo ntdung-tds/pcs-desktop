@@ -16,6 +16,13 @@
 
 Native PCS 2.1 already bundles **one** `pcs-continuity` Skill in `distribution/pcs21/KIT/starter/.agents/skills/pcs-continuity/SKILL.md`. It is available only when the host/installer actually installs or discovers it. Prompt-first mode works **without any Skill**; do not create a duplicate Skill for SRS or checklists. Use `docs/REQUIREMENT_CHANGE_CONTROL.md` only when a requirement changes; keep the original SRS untouched.
 
+## Outcome-first agent autonomy
+
+- Treat SRS/SOW as requirements for outcomes, business invariants, data boundaries, security, compatibility and acceptance. Example routes, schemas, DDL, tests and task decomposition are **implementation aids**, not automatically binding contracts.
+- Use the actual local coding tools to choose solutions, refine internal contracts, split/combine tasks, refactor and test in proportion to risk **without asking for Owner approval on each routine design choice**. Preserve approved/public interfaces and required outcomes.
+- OPEN decisions block only the dependent or irreversible action; safe independent work can continue. Production, IAM/secrets, sensitive data, destructive changes, financial actions or breaking approved contracts still require verified authority and real evidence.
+- Keep existing PCS 2.1 state and distribution formats unchanged. Record real requirement deltas only in the project's `pcs/SRS_CHANGES.md`; never silently rewrite the baseline or claim unrun tests passed.
+
 ## Agent checklist
 
 1. Identify the user's project and actual workspace/tools. Read the user's requirements, project instructions and current project state. For an existing PCS 2.1 workspace, prefer `pcs/current.json` and its current Moment, use the optional bounded context selector when available, and use the existing project `AGENTS.md` / `node tools/pcs.mjs resume` only when the toolkit is installed and applicable.
